@@ -1,6 +1,6 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
-public abstract class Cell {
+public abstract class Cell implements IOwnable {
 	private boolean available = true;
 	private String name;
 	protected Player owner;
@@ -21,7 +21,7 @@ public abstract class Cell {
 		return available;
 	}
 	
-	public abstract void playAction();
+	public abstract boolean playAction(String msg);
 
 	public void setAvailable(boolean available) {
 		this.available = available;
